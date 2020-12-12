@@ -13,8 +13,7 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-const uri =
-    "mongodb+srv://siddharth:activesid0@cluster0.72cfk.mongodb.net/test?retryWrites=true&w=majority";
+const uri = process.env.MONGO_URI;
 mongoose.connect(uri, {
     useNewUrlParser: true,
     useCreateIndex: true,
